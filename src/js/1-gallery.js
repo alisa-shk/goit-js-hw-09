@@ -1,4 +1,5 @@
-import SimpleLightbox from "simplelightbox";
+import Simplelightbox from "simplelightbox";
+import "simplelightbox/dist/simple-lightbox.min.css";
 
 const images = [
     {
@@ -84,6 +85,13 @@ const pictures = images.map(image => {
 ).join("");
 
 galleryContainer.insertAdjacentHTML("afterbegin", pictures);
+
+let lightbox = new Simplelightbox('.gallery a', { /* options */ 
+    captionsData: "alt",
+    captionDelay: 250
+});
+
+
 
 
 // galleryContainer.addEventListener("click", handleClick);
